@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic-Webpage</title>
+
+    </style>
+    <script>
+        function setBackgroundColorByTime() {
+            const now = new Date();
+            const hour = now.getHours();
+            let bgColor;
+
+            if (hour >= 6 && hour < 12) {
+                bgColor = " #FFFF00"; // Morning (6am–12pm):Yellow
+            } else if (hour >= 12 && hour < 18) {
+                bgColor = "#0000FF"; // Afternoon (12pm–6pm): Blue
+            } else if (hour >= 18 && hour < 21) {
+                bgColor = "#FFC0CB"; // Evening (6pm–9pm): Pink
+            } else {
+                bgColor = "#008000"; // Night (9pm–6am): Green
+            }
+
+            document.body.style.backgroundColor = bgColor;
+        }
+
+        window.onload = setBackgroundColorByTime;
+    </script>
+</head>
+<body>
+    <h1>Patrycja Piskorska</h1>
+    <p><strong>COP4813</strong>
+    <p><strong>Criminology</strong>
+    <h2>Welcome to my dynamic webpage!</h2>
+</body>
+</html>
